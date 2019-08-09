@@ -40,7 +40,7 @@
                                     <thead>
                                         <tr>
                                             <th>S-No</th>
-                                            <th>Image</th>
+                                            <th>Immagine</th>
                                             <th>Nome E Cognome</th>
                                              <th>E-mail</th> 
                                               <th>Cap</th>

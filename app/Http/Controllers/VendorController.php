@@ -160,18 +160,18 @@ class VendorController extends Controller
                         $insert12->save();
                      
 
-                              $subject= 'Registration Confirmation';
+                              $subject= 'Conferma registrazione';
 
                              $header = "From:bklic@bklic.komete.it \r\n";
                              $header.= 'MIME-Version: 1.0' . "\r\n";
-                             $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                             $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
                              $message ='Ciao '.$request->input('name').'<br/>'; 
                              $message.='Complimenti! Sei appena entrato a far parte della rete di negozi Bklic con il tuo xxxxx ('.$request->input('userName').').<br/>';
                              $message.= ' Ti ricordiamo che questa affiliazione dura un anno a partire da oggi. ​ <br/>';
                              $message.='Scopri subito come farti conoscere link articolo come farsi pubblicità di un articolo da tenere pubblicato nel blog e riutilizzare.</br>'; 
                              $message.= 'Per favore, conferma la tua registrazione al seguente link.<br/>';
-                             $message.= '<a href="'.url('affiliatese-login/'.$request->input('_token')).'">Click here</a>';
+                             $message.= '<a href="'.url('affiliatese-login/'.$request->input('_token')).'">Clicca qui</a>';
 
                              mail($request->input('email'),$subject,$message,$header);
 
@@ -376,15 +376,15 @@ class VendorController extends Controller
 
                      User::where(['id' => $checkEmailExists->id])->update($updateToken);
 
-                      $subject= 'ForgotPassword Confirmation';
+                      $subject= 'Password dimenticata';
 
                      $header = "From:bklic@bklic.komete.it \r\n";
                      $header.= 'MIME-Version: 1.0' . "\r\n";
-                     $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                     $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
-                     $message ='Hello '.$checkEmailExists->name.'<br/>'; 
-                     $message.='You can reset your password bellow link . <br/>'; 
-                     $message.= '<a href="'.url('user-resetpassword/'.$token).'">Please click on link to verify your email address</a>';
+                     $message ='Ciao '.$checkEmailExists->name.'<br/>'; 
+                     $message.='Puoi resettare la password con il link sotto . <br/>'; 
+                     $message.= '<a href="'.url('user-resetpassword/'.$token).'">Per favore clicca il link per verificare il tuo indirizzo email</a>';
 
                      mail($email,$subject,$message,$header);  
 
@@ -1323,11 +1323,11 @@ class VendorController extends Controller
                  if(in_array($reminderDate,$rmdatearr)) 
                  {
 
-                    $subject= 'Renewal Notification';
+                    $subject= 'Notifica di rinnovo';
 
                      $header = "From:bklic@bklic.komete.it \r\n";
                      $header.= 'MIME-Version: 1.0' . "\r\n";
-                     $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                     $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
 
                      $message ='Hello '.$userDetail->name.'<br/>'; 
@@ -1354,14 +1354,14 @@ class VendorController extends Controller
                  if(in_array($reminderDay,$rmdatearr)) 
                  {
 
-                     $subject= 'Renewal Notification';
+                     $subject= 'Notifica di rinnovo';
 
                      $header = "From:bklic@bklic.komete.it \r\n";
                      $header.= 'MIME-Version: 1.0' . "\r\n";
-                     $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                     $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
 
-                    $message ='Hello '.$userDetail->name.'<br/>'; 
+                    $message ='Ciao '.$userDetail->name.'<br/>'; 
                      $message.= 'Ciao xxxxx '.$userDetail->name.', ti ricordiamo che l’affiliazione a Bklic sottoscritta  per il tuo negozio '.$userDetail->name.'.</br>';
                      $message.= 'il giorno '.$finalDate.' va rinnovata entro  il giorno '.$finalDate.'';
                      // $message.= '<h3 style="color: green">Thank you for your interest</h3>';

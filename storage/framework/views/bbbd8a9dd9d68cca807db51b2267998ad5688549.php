@@ -54,7 +54,7 @@
 					  			  <th>S-No</th>
 						  		  <th>Nome dell'abbonamento</th>
 								  <th>Durata (Mesi)</th>
-						  		  <th>Prezzo di abbonamento</th>								 
+						  		  <th>Prezzo dell’abbonamento</th>								 
 								  <th>Azione</th>
 						  	 </tr>
 						</thead>

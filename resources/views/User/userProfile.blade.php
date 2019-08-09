@@ -37,11 +37,11 @@
   @endif
 
   <div class="col-md-12">
-      <h3 class="page-info page-info-title">Completa il tuo profilo per ottenere la carta Bklic e la lettera di conferma</h3>
+      <h3 class="page-info page-info-title">Completa il tuo profilo per scaricare la lettera di incarico e il tuo tesserino</h3>
     <!-- Form Elements -->
     <div class="panel panel-primary">
 	<div class="panel-heading">
-    <h3 class="panel-title detail-heading">Personal Data</h3>
+    <h3 class="panel-title detail-heading">Dati personali</h3>
      </div>
      <div class="panel-body">
       <form role="form" method="post" id="demo-form" data-parsley-validate enctype="multipart/form-data">
@@ -231,9 +231,9 @@
 
 <div class="col-md-6">
   <div class="form-group form-group{{ $errors->has('Fcode') ? ' has-error' : '' }}">
-    <label for="Fcode">Cod. Fiscale <span style="color: red;">*</span></label>
+    <label for="Fcode">Cod. Fiscale <!-- <span style="color: red;">*</span> --></label>
     
-    <input id="Fcode" type="text" class="form-control" name="Fcode" value="{{ !empty($userProfile->fcode)?$userProfile->fcode: old('Fcode') }}" required>
+    <input id="Fcode" type="text" class="form-control" name="Fcode" value="{{ !empty($userProfile->fcode)?$userProfile->fcode: old('Fcode') }}" >
 
     @if ($errors->has('Fcode'))
     <span class="help-block">
@@ -298,9 +298,9 @@
 
 <div class="col-md-6">
  <div class="form-group form-group{{ $errors->has('business_name') ? ' has-error' : '' }}">
-  <label for="business_name">Ragione Sociale <span style="color: red;">*</span></label>
+  <label for="business_name">Ragione Sociale<!--  <span style="color: red;">*</span> --></label>
   
-  <input id="business_name" type="text" class="form-control" name="business_name" value="{{ !empty($userProfile->business_name)?$userProfile->business_name: old('business_name') }}" required>
+  <input id="business_name" type="text" class="form-control" name="business_name" value="{{ !empty($userProfile->business_name)?$userProfile->business_name: old('business_name') }}">
 
   @if ($errors->has('business_name'))
   <span class="help-block">
@@ -387,6 +387,33 @@
 
 </div>   
 
+<div class="row">
+    <div class="col-md-6">
+
+    <div class="form-group form-group{{ $errors->has('contract_letter') ? ' has-error' : '' }}">
+
+      <label for="pariva">lettera di incarico</label>   
+
+      <input id="contract_letter" type="file" class="form-control custom-file-input" name="contract_letter" >
+      <div class="jumbotron">
+       <div class="image-wrap">
+      <input type="hidden" name="old_file_contract" value="{{!empty($userProfile->photo_id_document)?$userProfile->photo_id_document:''}}"> 
+      @if(!empty($userProfile->photo_id_document))
+   
+      <object style="height: 82px;width: 89px;" data="{{url('images/profile_images/'.$userProfile->photo_id_document)}}"></object>
+      @endif
+
+      @if ($errors->has('contract_letter'))
+      <span class="help-block">
+        <strong>{{ $errors->first('contract_letter') }}</strong>
+      </span>
+      @endif
+    </div>
+    </div>
+    </div>  
+  </div>
+
+</div>
 
 
 

@@ -32,7 +32,7 @@
 				<div class="tables">
 				<div class="panel panel-primary">
 				  <div class="panel-heading">
-					<h3 class="panel-title">Utente di conversione</h3>
+					<h3 class="panel-title">Richiesta provvigioni</h3>
 				  </div>
 				  <div class="panel-body">
 					<div class="table-responsive">

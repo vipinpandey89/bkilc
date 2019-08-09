@@ -47,7 +47,7 @@
 							<th>Tipologia</th>						  	 	 
 							<th>Scadenza</th>
 							<th>Stato</th>
-							<th>Quantità</th>
+							<th>Ammontare</th>
 
 
 						</tr>

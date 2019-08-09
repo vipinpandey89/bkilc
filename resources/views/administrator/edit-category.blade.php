@@ -26,7 +26,7 @@
 
 							<div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
 
-								 <label for="exampleInputEmail1">Titolo</label> 
+								 <label for="exampleInputEmail1">Ragione sociale</label> 
 
 								 <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{!empty($categoryGetById)?$categoryGetById->title:old('title')}}" placeholder="nome categoria">
 

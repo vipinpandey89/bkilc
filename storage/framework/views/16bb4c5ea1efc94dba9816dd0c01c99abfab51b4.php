@@ -85,7 +85,7 @@
 
 
                             <div class="form-group <?php echo e($errors->has('renuwal_point') ? ' has-error' : ''); ?>">
-                                 <label for="renuwal_point">   Costo rinnovo  (After 12 Mesi)​</label> 
+                                 <label for="renuwal_point">   Costo rinnovo  (dopo 12 Mesi)​</label> 
                                         <input type="text" class="form-control" id="renuwal_point" name="renuwal_point" value="<?php echo e(!empty($levelDetail)?$levelDetail->renuwal_account:old('renuwal_point')); ?>" placeholder="Costo rinnovo (After 12 Mesi)​">
 
                                     <?php if($errors->has('renuwal_point')): ?>

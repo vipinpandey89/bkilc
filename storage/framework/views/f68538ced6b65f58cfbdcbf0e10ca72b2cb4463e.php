@@ -104,8 +104,27 @@
  </div>
  </div>
  </div>
- 
- 
+
+<?php if(!empty($getVideo)){?>
+ <div class="featured">
+  <div id="service_section" class="section">
+       <div class="container">
+        <!--  <h2 class="title_heading">prodotti sponsorizzati</h2> -->
+        
+         <div class="feature-grids">
+
+          <?php $__currentLoopData = $getVideo; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $videoitem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+             <div class="col-md-3 col-sm-3 jewel">
+                <iframe width="100%" height="400" src="<?php echo e(url('dealer_videos/'.$videoitem->video)); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+         </div>
+     </div> 
+</div>
+ </div>
+<?php }?>
 </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('website-layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -69,7 +69,7 @@
 							</div>
 
 							<div class="form-group ">
-								<label for="FilUploader">Image</label> 
+								<label for="FilUploader">Immagine</label> 
 								<input type="file" title="Nome del file" class="form-control" id="FilUploader" name="image" value="" required>
 							</div>
 							

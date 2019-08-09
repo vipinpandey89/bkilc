@@ -49,8 +49,8 @@
 
 
 							<div class="form-group {{ $errors->has('amount') ? ' has-error' : '' }}">
-								 <label for="amount">Quantità</label> 
-								 <input type="text" class="form-control" id="amount" name="amount" value="{{ !empty($bonus)?$bonus->bklic_profit:old('amount')}}" placeholder="Quantità" maxlength="30">
+								 <label for="amount">Ammontare</label> 
+								 <input type="text" class="form-control" id="amount" name="amount" value="{{ !empty($bonus)?$bonus->bklic_profit:old('amount')}}" placeholder="Ammontare" maxlength="30">
 
 								    @if ($errors->has('amount'))
                                     <span class="help-block">

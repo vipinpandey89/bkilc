@@ -112,7 +112,7 @@ elseif($userAs=='PE'){
 			  <div class="panel-body"> 
 			  <div class="vertical-pipes custom-box">
                 <h5>Ipsum</h5>
-				<p>{{ (count($userProfile)>0)?$userProfile->total_wallet:'0'}}</p>
+				<p>{{ ($userProfile->total_wallet > 0)?$userProfile->total_wallet:'0'}}</p>
 				<p class="big-f">P.V</p>
 			  </div>
 			  </div>
@@ -126,7 +126,7 @@ elseif($userAs=='PE'){
 			  <div class="panel-body"> 
 			  <div class="vertical-pipes custom-box">
 				<h5>Ipsum</h5>
-				<p>{{ (count($userProfile)>0)?$userProfile->founder_bonus_point_value:'0'}}</p>
+				<p>{{ ($userProfile->founder_bonus_point_value > 0)?$userProfile->founder_bonus_point_value:'0'}}</p>
 				<p class="big-f">P.V</p>
 			  </div>
 			  </div>

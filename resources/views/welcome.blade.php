@@ -151,7 +151,7 @@ Unisciti a noi per costruire il più grande circuito commerciale e la più grand
            <div class="col-lg-6 col-md-6 col-sm-12">
                <div class="row text_frame">
                    <div class="text_wrapper">
-                       <h2 style="margin-top:20px;">Carriera e Guadagni</h2>
+                       <h2 class="title_heading">Carriera e Guadagni</h2>
                        <p>Bklic è la prima azienda, che adotta un <b>nuovo modello di Piano Marketing e distribuzione dei compensi</b>.</p>
                        <p>A differenza del metodo adottato diffusamente da altre aziende, dove i collaboratori guadagnano sulla "<b>differenza imprenditoriale</b>", Bkilc ha deciso di essere pioniere su due nuovi concetti:</p>
                        <p>1) <b>Guadagno secco per ogni livello di organizzazione</b> e somma dei guadagni maturati per ogni livello di organizzazione.</p>

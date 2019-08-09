@@ -31,7 +31,7 @@
 				<div class="tables">
 				<div class="panel panel-primary">
 				  <div class="panel-heading">
-					<h3 class="panel-title">Utente di conversione</h3>
+					<h3 class="panel-title">Richiesta provvigioni</h3>
 				  </div>
 				  <div class="panel-body">
 					<div class="table-responsive">
@@ -45,6 +45,8 @@
 								  <th>CAP</th>
 								  <th>Importo da pagare</th>
 								  <th>PayPal</th>
+								    <th>Banca</th>
+								     <th>Iban</th>
 								  <th>Azione</th>
 						  	 </tr>
 						</thead>
@@ -60,7 +62,9 @@
 							        <td><?php echo e($detail->postalCode); ?></td>
 							        <td>&euro;<?php echo e($detail->amount); ?></td>
 
-							        <td><?php echo e($detail->paypal); ?></td>							       
+							        <td><?php echo e($detail->paypal); ?></td>	
+							        <td><?php echo e($detail->bank); ?></td>	
+							         <td><?php echo e($detail->iban); ?></td>						       
 								   	<td>		
 								   		<?php if($detail->paid_status=='1')
 								   		{

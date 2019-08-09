@@ -46,13 +46,13 @@
 						 <thead>
 						  	 <tr> 
 					  			  <th>S-No</th>
-                    <th>Name</th>
-						  		  <th>Payment</th>
-						  		  <th>Status</th>
-						  	 	  <th>Amount</th>
-						  	  	<th>Promoter Name</th>
-                    <th>Start Date</th>
-                    <th>Expiration Date</th> 
+                    <th>Nome</th>
+						  		  <th>Pagamento</th>
+						  		  <th>Stato</th>
+						  	 	  <th>Ammontare</th>
+						  	  	<th>Nome del promoter</th>
+                    <th>Data di inizio</th>
+                    <th>Data di fine</th> 
 						  	       
 						  	 </tr>
 						</thead>

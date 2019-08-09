@@ -56,7 +56,7 @@
 						  	 <tr> 
 					  			  <th>S-No</th>
 					  			  <th>Logo</th>
-						  		  <th>Namo</th>						  	 				  	  	
+						  		  <th>Nome</th>						  	 				  	  	
 						  	      <th>Telefono</th> 
 						  	      <th>Cap</th>
 						  	      <th>E-mail</th>

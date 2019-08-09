@@ -151,10 +151,10 @@
                                 <td><div class="name-field">{{date('d-m-Y',strtotime($data->dob))}}</div></td>
                               </tr>
                              
-                             <!--  <tr>
-                                <td>Bklic Id</td>
-                                <td><div class="name-field">#{{$data->id}}</div></td>
-                              </tr> -->
+                             <tr>
+                                <td>Codice Di Riferimento</td>
+                                <td><div class="name-field">{{$data->referralCode}}</div></td>
+                              </tr> 
                             </table>
                         </div>
                       </td>

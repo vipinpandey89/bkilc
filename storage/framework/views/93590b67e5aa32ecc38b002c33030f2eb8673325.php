@@ -55,8 +55,8 @@
 									<div class="affiliates-col">
 										<div class="row">
 											<div class="col-md-12">
-												<label for="location" class="control-label form-label-text">Location</label>
-												<input class="form-control form-input-field" type="text" name="location" id="location" value="" placeholder="Destination, Area, Street" />
+												<label for="location" class="control-label form-label-text">Posizione</label>
+												<input class="form-control form-input-field" type="text" name="location" id="location" value="" placeholder="" />
 											</div>
 										</div>
 									</div>
@@ -150,7 +150,7 @@
 						<div class="prod-dis">
 							<h4><?php echo e($val->business_name); ?></h4>
 						</div>
-						<p class="prod-desc"><?php echo e(strip_tags(str_limit($val->description, $limit = 100, $end = '...'))); ?><p>
+						<!-- <p class="prod-desc"><?php echo e(strip_tags(str_limit($val->description, $limit = 100, $end = '...'))); ?><p> -->
 							<div class="reviewmain">
 								<div class="reviews">
 									<span class="fa fa-star <?php if($totalaverage >= 1): ?><?php echo e('checked'); ?> <?php endif; ?>"></span>

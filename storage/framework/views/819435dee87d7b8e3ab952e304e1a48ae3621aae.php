@@ -471,7 +471,7 @@ $(document).on('click','.chlid',function(){
             }
              
              $('.dob').html("<span>Data di nascita</span>:-"+result.dob);
-             $('.c-level').html("<span>Current-Level</span>:-"+result.user_as);          
+             $('.c-level').html("<span>Livello attuale</span>:-"+result.user_as);          
       
              if(result.profileimage!='' && result.profileimage!=null) {
                $('.user-image').html('<img src="images/profile_images/' + result.profileimage + '" />');

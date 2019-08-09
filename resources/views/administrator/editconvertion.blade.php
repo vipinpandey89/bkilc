@@ -59,7 +59,7 @@
 
 
 							<div class="form-group {{ $errors->has('euros') ? ' has-error' : '' }}">
-								 <label for="euros">Euros</label> 
+								 <label for="euros">Euro</label> 
 								 <input type="text" class="form-control" id="euros" disabled="" value="{{!empty($getConvertionById)?$getConvertionById->convertion_euro:''}}" name="euros" placeholder="Euros">
 
 								  @if ($errors->has('euros'))

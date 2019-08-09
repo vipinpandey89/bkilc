@@ -31,7 +31,7 @@
 						<div class="prod-dis">
 							<h4>{{$val->business_name}}</h4>
 						</div>
-						<p class="prod-desc">{{ strip_tags(str_limit($val->description, $limit = 100, $end = '...')) }}<p>
+						<!-- <p class="prod-desc">{{ strip_tags(str_limit($val->description, $limit = 100, $end = '...')) }}<p> -->
 							<div class="reviewmain">
 							<div class="reviews">
 									<span class="fa fa-star @if($val->rate >= 1){{'checked'}} @endif"></span>

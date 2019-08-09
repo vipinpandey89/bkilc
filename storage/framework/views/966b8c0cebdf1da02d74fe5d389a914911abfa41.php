@@ -50,7 +50,7 @@
                                   <th>Image</th>
 						  		  <th>Nome</th>
 						  		  <th>Cognome</th>
-						  	 	  <th>Percentuakle Profitto</th>		
+						  	 	  <th>Percentuale profitto</th>		
                     <th>Totale</th>				  	  	 
 						  	    <th>Azione</th> 
 						  	 </tr>

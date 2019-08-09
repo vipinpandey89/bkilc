@@ -45,9 +45,9 @@ class UserController extends Controller
                      // 'resiaddress' => 'required|string|max:255',
                       'region'      => 'required|string|max:255',
                      // 'streat'    =>   'required|string|max:255',
-                      'Fcode'    =>    'required|string|max:255',
+                     // 'Fcode'    =>    'required|string|max:255',
                       // 'pariva'   =>    'required|string|max:255', 
-                      'business_name'   =>    'required|string|max:255',
+                      //'business_name'   =>    'required|string|max:255',
                       'IBAN'   =>    'required|numeric|min:20',
                       'bank'   =>    'required|string|max:255',
                       'Paypal'   =>    'required|string|email|max:255',
@@ -64,9 +64,9 @@ class UserController extends Controller
              // $message['resiaddress.required']   =  'È richiesto il campo Residente a';
               $message['region.required']        =   'È richiesto il campo Regione';
              // $message['streat.required']        =   'È richiesto il campo Via';
-              $message['Fcode.required']         =   'È richiesto il campo Codice Fiscale';
+             // $message['Fcode.required']         =   'È richiesto il campo Codice Fiscale';
               // $message['pariva.required']        =    'È richiesto il campo Part. I.V.A';
-              $message['business_name.required']  =    'Il campo Nome aziendale è obbligatorio';
+             // $message['business_name.required']  =    'Il campo Nome aziendale è obbligatorio';
               $message['IBAN.required']        =    'È richiesto il campo del nome Iban';
               $message['bank.required']        =    'Il campo del nome della banca è obbligatorio';
               $message['Paypal.required']        =    'Il campo del nome paypal è obbligatorio';
@@ -125,6 +125,19 @@ class UserController extends Controller
                        }
                  }
 
+
+               if(!empty($request->file('contract_letter'))){
+                     $imageContract       =         !empty($request->file('contract_letter'))  ?  $request->file('contract_letter') : '';
+                     $fileextimageContract     =         $imageContract->getClientOriginalExtension(); 
+
+                     // file move to folder//
+                     $imagNmaeContract = time().'.'.$imageContract->getClientOriginalExtension();
+                     $destinationPathContract = public_path('/images/profile_images');
+                     $imageContract->move($destinationPathContract, $imagNmaeContract);
+                 }else{
+                    $imagNmaeContract=  $request->input('old_file_contract');
+                 }
+
              // end here //
 
 
@@ -149,19 +162,19 @@ class UserController extends Controller
          					// end here// 
 
 
-                 	 		     $subject= 'Profile Completed Confirmation ';
+                 	 		     $subject= 'Conferma completata profilo '; 
 
                              $header = "From:bklic@bklic.komete.it \r\n";
                              $header.= 'MIME-Version: 1.0' . "\r\n";
-                             $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                             $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
                              $message ='Ciao '.$userProfile->name.'<br/>';
                              $message.='Grazie per aver completato il tuo profilo personale! ​ .<br/>';
                              $message.='Ecco qui la tua carta Promoter da esibire in pubblico e la lettera di incarico di Bklic.<br/>';
 
-                             $message.= '<a href="'.url('images/'.$rand.'.pdf').'">Click here for contract letter </a>'.'<br/>';
+                             $message.= '<a href="'.url('images/'.$rand.'.pdf').'">Clicca qui per la lettera di incarico </a>'.'<br/>';
 
-                             $message.= '<a href="'.url('images/'.$rand1.'.pdf').'">Click here for Bklic Card </a>';
+                             $message.= '<a href="'.url('images/'.$rand1.'.pdf').'">Clicca qui per la carta Bklic </a>';
 
                              mail($userProfile->email,$subject,$message,$header);
 	 
@@ -183,7 +196,7 @@ class UserController extends Controller
                                   'pariva'    =>  $pariva,
                                   'is_profile_complete'=>'1',
                                   'profileimage'=>$imagNmae,
-                                 //'photo_id_document'=>$imagNmae1,
+                                 'photo_id_document'=>$imagNmaeContract,
                                   'business_name'=>$business_name,
                                   'iban'  =>  $IBAN,
                                   'bank'  =>$bank,
@@ -597,7 +610,7 @@ class UserController extends Controller
 
                                  $header = "From:bklic@bklic.komete.it \r\n";
                                  $header.= 'MIME-Version: 1.0' . "\r\n";
-                                 $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                                 $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
                                  $message = 'Ciao  :' .$getUserDetail->name.'<br/>';
                                  $message.='hai effettuato correttamente l’upgrade da '.$getUserDetail->user_as.' a '.$custom.'.</br>';
@@ -1059,22 +1072,22 @@ class UserController extends Controller
 
     public function ExportPdf()
     {
-    	// $userId= Auth::id();
+    	 $userId= Auth::id();
 
-    	// $data = User::where(['id'=>$userId])->first();
-    	// return view('Pdf.pdf-design',['data'=>$data]);
+    	$data = User::where(['id'=>$userId])->first();
+    	return view('Pdf.pdf-design',['data'=>$data]);
 
-         $userId= Auth::id();
+        // $userId= Auth::id();
 
-          $rand= rand('123456','845945');
-        // Fetch all customers from database
-            $data = User::where(['id'=>$userId])->first();
-            // Send data to the view using loadView function of PDF facade
-            $pdf = PDF::loadView('Pdf.pdf-design',['data'=>$data]);
-            // If you want to store the generated pdf to the server then you can use the store function
-          	$pdf->save(public_path('images/').$rand.'.pdf');
-            // Finally, you can download the file using download function
-            return $pdf->download('customers.pdf');
+        //   $rand= rand('123456','845945');
+        // // Fetch all customers from database
+        //     $data = User::where(['id'=>$userId])->first();
+        //     // Send data to the view using loadView function of PDF facade
+        //     $pdf = PDF::loadView('Pdf.pdf-design',['data'=>$data]);
+        //     // If you want to store the generated pdf to the server then you can use the store function
+        //   	$pdf->save(public_path('images/').$rand.'.pdf');
+        //     // Finally, you can download the file using download function
+        //     return $pdf->download('customers.pdf');
     }  
 
     public function ExportCardPdf()
@@ -1082,7 +1095,7 @@ class UserController extends Controller
 
         	 $userId= Auth::id();
 
-         //   $data = User::where(['id'=>$userId])->first();
+         //  $data = User::where(['id'=>$userId])->first();
          // return view('Pdf.card-emailer',['data'=>$data]);die;
 
         	 $rand= rand('123456','987451');
@@ -1092,7 +1105,7 @@ class UserController extends Controller
             // Send data to the view using loadView function of PDF facade
             $pdf = PDF::loadView('Pdf.card-emailer',['data'=>$data]);
             // If you want to store the generated pdf to the server then you can use the store function
-            //$pdf->save(public_path('images/').$rand.'.pdf');
+            $pdf->save(public_path('images/').$rand.'.pdf');
 
             // Finally, you can download the file using download function
             return $pdf->download('customers.pdf');

@@ -124,7 +124,8 @@ input:checked + .slider:after
 						  	   	  <th>CAP</th>
                        <th>Tipologia</th>
 						  	      <th>E-mail</th> 
-                       <th data-orderable="false">Id</th>
+                       <td>Id</td>
+                       <td>Lettera </td>
 						  	      <th>data</th> 
 						  	       <th data-orderable="false">Azione</th> 
                        <th data-orderable="false">Founder</th> 
@@ -157,11 +158,12 @@ input:checked + .slider:after
                      <td>
                        
                         <a class="chlid-document" data-id="{{$user->id}}">
-                              ViewDocument
+                              vedi documento
                            
                           </a>
                        
                      </td>
+                     <td><?php if(!empty($user->photo_id_document)){?><a href="{{url('images/profile_images/'.$user->photo_id_document)}}" download title="Contract Letter">Scaricare</a><?php }else{echo '-';}?></td>
 							       <td>{{date('d-m-Y',strtotime($user->created_at))}}</td>
 							        <td>
 							        	<a class="btn btn-primary btn-sm" href="{{url('administrator/userdetail/'.$user->id)}}" title="Rete"><i class="fa fa-eye" aria-hidden="true"></i></a>

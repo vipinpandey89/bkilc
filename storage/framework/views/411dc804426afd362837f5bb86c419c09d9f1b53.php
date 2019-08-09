@@ -48,8 +48,8 @@
 
 
 							<div class="form-group <?php echo e($errors->has('amount') ? ' has-error' : ''); ?>">
-								 <label for="amount">Quantità</label> 
-								 <input type="text" class="form-control" id="amount" name="amount" value="<?php echo e(!empty($bonus)?$bonus->bklic_profit:old('amount')); ?>" placeholder="Quantità" maxlength="30">
+								 <label for="amount">Ammontare</label> 
+								 <input type="text" class="form-control" id="amount" name="amount" value="<?php echo e(!empty($bonus)?$bonus->bklic_profit:old('amount')); ?>" placeholder="Ammontare" maxlength="30">
 
 								    <?php if($errors->has('amount')): ?>
                                     <span class="help-block">

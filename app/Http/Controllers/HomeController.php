@@ -14,6 +14,7 @@ use App\CalendarManagement;
 use Illuminate\Support\Facades\DB;
 use File;
 use Helper;
+use App\NewCms;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -69,7 +70,7 @@ class HomeController extends Controller
                                           ->whereMonth('commission.created_at','=',date("m",strtotime("-1 month")))
                                           ->sum('commission_point'); 
          
-         $allNewsEvents= CalendarManagement::all();
+         $allNewsEvents= NewCms::all();
 
          $userProfile=  User::where(['id'=>$userId,'status'=>'1','is_deleted'=>'0','role_type'=>'2'])->first();
 
@@ -178,16 +179,20 @@ class HomeController extends Controller
                               Helper::saveNotification($user->id, $user->parent_id, $notMessage, '2', '1');
                                // end here//
 
-                            $subject= 'Registration Confirmation';
+                            $subject= 'Conferma registrazione';
 
                              $header = "From:bklic@bklic.komete.it \r\n";
                              $header.= 'MIME-Version: 1.0' . "\r\n";
-                             $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                             $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
-                             $message ='Ciao '.$request->input('name').'<br/>'; 
-                             $message.='Benvenuto in Bklic, grazie per esserti registrato!  <br/>'; 
-                             $message.= 'Conferma la tua registrazione al seguente link e completa subito il tuo profilo personale!​.<br/>';
-                             $message.= '<a href="'.url('user-login/'.$request->input('_token')).'">Click here</a>';
+                             $message ='<p>Ciao '.$request->input('name').'</p>'; 
+							 $message.='<p></p>';
+                             $message.='<p>Benvenuto in Bklic, grazie per esserti registrato!  </p>'; 
+							 $message.='<p></p>';
+                             $message.= '<p>Conferma la tua registrazione al seguente link e completa subito il tuo profilo personale! </p>​';
+							 $message.='<p></p>';
+                             $message.= '<p><a href="'.url('user-login/'.$request->input('_token')).'">Clicca qui</a></p>';
+							 $message.='<p></p>';
 
                              mail($request->input('email'),$subject,$message,$header);
 
@@ -393,15 +398,18 @@ class HomeController extends Controller
 
                      User::where(['id' => $checkEmailExists->id])->update($updateToken);
 
-                      $subject= 'ForgotPassword Confirmation';
+                      $subject= 'Password dimenticata';
 
                      $header = "From:bklic@bklic.komete.it \r\n";
                      $header.= 'MIME-Version: 1.0' . "\r\n";
-                     $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                     $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
-                     $message ='Hello '.$checkEmailExists->name.'<br/>'; 
-                     $message.='You can reset your password bellow link . <br/>'; 
-                     $message.= '<a href="'.url('user-resetpassword/'.$token).'">Please click on link to verify your email address</a>';
+                     $message ='<p>Ciao '.$checkEmailExists->name.'</p>'; 
+					 $message.='<p></p>';
+                     $message.='<p>Puoi resettare la password con il link sotto . </p>'; 
+					 $message.='<p></p>';
+                     $message.= '<p><a href="'.url('user-resetpassword/'.$token).'">Per favore clicca il link per verificare il tuo indirizzo email</a></p>';
+					 $message.='<p></p>';
 
                      mail($email,$subject,$message,$header);  
 

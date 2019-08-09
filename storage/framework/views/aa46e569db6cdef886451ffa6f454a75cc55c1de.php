@@ -60,7 +60,7 @@
 
 				<div class="table-responsive">
 						<div class="col-md-12">
-							<a id="eventUrl" target="_blank" href="#"><h4><i class="fa fa-calendar" aria-hidden="true"></i> <span id="modalTitle">Reunion</span></h4></a>
+							<a id="eventUrl" target="_blank" href="#"><h4><i class="fa fa-calendar" aria-hidden="true"></i> <span id="modalTitle">Evento</span></h4></a>
 							<p><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="startTime">2019-05-09</span> to <span id="endTime">2019-05-09</span></p>
 						</div>
 						<div class="col-md-12">	

@@ -426,7 +426,7 @@ class AdministratorController extends Controller
 
                $header = "From:bklic@bklic.komete.it \r\n";
                $header.= 'MIME-Version: 1.0' . "\r\n";
-               $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+               $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
                $message ='Ciao '.$getDetail->name.'<br/>'; 
                $message.='Il tuo account viene eliminato dal lato amministratore. <br/>'; 
@@ -471,7 +471,7 @@ class AdministratorController extends Controller
 
                  $header = "From:bklic@bklic.komete.it \r\n";
                  $header.= 'MIME-Version: 1.0' . "\r\n";
-                 $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                 $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
                  $message ='Ciao '.$getDetail->name.'<br/>'; 
                  $message.='Il tuo account è stato bloccato dal lato amministrativo. <br/>'; 
@@ -698,12 +698,13 @@ class AdministratorController extends Controller
 
             $rules=[
                       'type' => 'required|string|max:255',
-                      'video' => 'required',
+                       'video' => 'required|mimes:mp4,ogx,oga,ogv,ogg,webm',
                   ];
 
 
              $message["type.required"] = 'Il campo del type è obbligatorio';
              $message["video.required"] = 'Il campo video è obbligatorio';
+             $message["video.mimes"] = 'Il tipo di video dovrebbe essere obbligatorio (mp4, ogx, oga, ogv, ogg, webm)';
          
               $this->validate($request, $rules,$message); 
 
@@ -892,7 +893,7 @@ class AdministratorController extends Controller
               
               $header = "From:bklic@bklic.komete.it \r\n";
               $header.= 'MIME-Version: 1.0' . "\r\n";
-              $header.= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+              $header.= 'Content-type: text/html; charset=utf-8' . "\r\n";
               
               $message ='Ciao '.$name.'<br/>'; 
               $message.='Il tuo account è stato attivato dal lato amministrativo. <br/>'; 

@@ -38,7 +38,7 @@
         <!--  <a href="<?php echo e(url('administrator/add-notification')); ?>" class="btn btn-primary" style="">Imposta promemoria</a>  -->
 			<div class="panel panel-primary">
 			  <div class="panel-heading">
-				<h3 class="panel-title">Imposta promemoria</h3>
+				<h3 class="panel-title">Imposta notifiche</h3>
 			  </div>
 			  <div class="panel-body">
 				<div class="table-responsive">

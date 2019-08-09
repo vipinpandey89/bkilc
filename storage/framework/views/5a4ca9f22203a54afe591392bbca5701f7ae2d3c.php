@@ -13,7 +13,7 @@
                             <ul>
                                 <li><a href="<?php echo e(url('/home')); ?>"><i class="fa fa-tachometer" aria-hidden="true"></i>Home</a></li>
                                 <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                                <li><a class="current" href="#">Contratti & card</a></li>
+                                <li><a class="current" href="#">Lettera di incarico & Tesserino</a></li>
                                
                             </ul>
                         </div>
@@ -42,8 +42,8 @@
                                     <thead>
                                         <tr>
                                             <th>S-No</th>
-                                            <th>Contratti letter</th>
-                                            <th>Card</th>   
+                                            <th>Lettera d’incarico</th>
+                                            <th>Tesserino</th>   
                                            <!-- <th>Action</th>   -->                                 
                                             
                                         </tr>
@@ -61,7 +61,7 @@
                                                  <img src="<?php echo e(url('/images/bklic_letter.jpg')); ?>" style="width: 101px; height: 87px;"> 
                                               </a> -->
 
-                                             <a href="<?php echo e(url('/contract-letter/pdf')); ?>"  title="Comfirmation Letter">
+                                             <a href="<?php echo e(url('/contract-letter/pdf')); ?>" target="_blank"  title="Comfirmation Letter">
                                                  <img src="<?php echo e(url('/images/bklic_letter.jpg')); ?>" style="width: 101px; height: 87px;"> 
                                               </a> 
 

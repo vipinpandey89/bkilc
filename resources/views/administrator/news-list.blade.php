@@ -56,7 +56,7 @@
 						  	 <tr> 
 					  			  <th>S-No</th>
 					  			  <th>Logo</th>
-						  		  <th>Title</th>
+						  		  <th>Titolo</th>
 						  	      <th>Azione</th> 
 						  	 </tr>
 						</thead>

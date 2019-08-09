@@ -91,7 +91,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                   <li><a href="<?php echo e(url('administrator/wallet-livello-list')); ?>"><i class="fa fa-angle-right"></i>Piano marketing</a></li>
                   <li><a href="<?php echo e(url('administrator/minimum-value-point')); ?>"><i class="fa fa-angle-right"></i>Gestione pacchetti</a></li>
                    <li><a href="<?php echo e(url('administrator/convertion')); ?>"><i class="fa fa-angle-right"></i>Conversioni</a></li>
-                   <li><a href="<?php echo e(url('administrator/pv-generation-convertion')); ?>"><i class="fa fa-angle-right"></i>PV generation conversioni</a></li>
+                   <li><a href="<?php echo e(url('administrator/pv-generation-convertion')); ?>"><i class="fa fa-angle-right"></i>Generazione PV</a></li>
                   <li><a href="<?php echo e(url('administrator/founder-list')); ?>"><i class="fa fa-angle-right"></i>Gestione bonus</a></li>
 
                 </ul>
@@ -145,7 +145,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                         
                      <li><a href="<?php echo e(url('administrator/payment-history')); ?>"><i class="fa fa-angle-right"></i>Lista dei Pagamenti </a></li>
                   <li><a href="<?php echo e(url('administrator/bonus-management')); ?>"><i class="fa fa-angle-right"></i> Gestione Bonus </a></li>
-                  <li class="treeview"> <a href="<?php echo e(url('administrator/user-conversion')); ?>"> <i class="fa fa-angle-right"></i><span>Generazioni PV</span></a>
+                  <li class="treeview"> <a href="<?php echo e(url('administrator/user-conversion')); ?>"> <i class="fa fa-angle-right"></i><span>Richiesta provvigioni</span></a>
                  
                 </ul>
               </li>
@@ -167,7 +167,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                      <li><a href="<?php echo e(url('administrator/publish-newsevent')); ?>"><i class="fa fa-angle-right"></i>Pubblica Eventi</a></li>
                      <li><a href="<?php echo e(url('administrator/publish-news')); ?>"><i class="fa fa-angle-right"></i>Pubblica News</a></li>
 
-                    <li><a href="<?php echo e(url('administrator/video-pages')); ?>"><i class="fa fa-angle-right"></i> Video Pages</a></li>
+                    <li><a href="<?php echo e(url('administrator/video-pages')); ?>"><i class="fa fa-angle-right"></i> Video</a></li>
                   <li><a href="<?php echo e(url('administrator/company-list')); ?>"><i class="fa fa-angle-right"></i> Modello aziendale</a></li>
                 </ul>
               </li>

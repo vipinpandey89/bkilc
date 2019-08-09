@@ -370,7 +370,7 @@ elseif($userProfile->user_as=='PT'){
 
           <div class="profile-inner profile-user-bx ">
 
-            <h3>Richiedi pagamento</h3>
+            <h3>Richiedi l’upgrade</h3>
 
             <div class="lavel-upgrade">
 
@@ -390,7 +390,7 @@ elseif($userProfile->user_as=='PT'){
 
             {?>
 
-             <input type="checkbox" name="become_founder" value="1">  Clicca per diventare un founder    &euro;<?php echo e($founderEuro); ?> 
+             <!--<input type="checkbox" name="become_founder" value="1">  Clicca per diventare un founder    &euro;<?php echo e($getAsPerlevelFounder->become_founder_euro); ?> -->
 
            <?php  } ?>
 
@@ -467,7 +467,7 @@ elseif($userProfile->user_as=='PT'){
 
     
 
-    var levelBecomeFounder = '<?php echo $founderEuro;?>';
+    var levelBecomeFounder = '<?php echo $getAsPerlevelFounder->become_founder_euro;?>';
 
 
 

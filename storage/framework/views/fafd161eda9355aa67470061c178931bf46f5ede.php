@@ -42,7 +42,7 @@
                                             <th>S-No</th>
                                             <th>Titolo</th>
                                             <th>Descrizione</th>
-                                             <th>Crea data</th> 
+                                             <th>Data</th> 
                                              
                                               
                                         </tr>

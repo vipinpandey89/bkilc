@@ -13,7 +13,7 @@
                                 <strong>{{Session::get('success') }}</strong>
                         </div>
                 @endif
-					<a href="{{url('administrator/elearningdocuments')}}" class="btn btn-primary"><-- Back</a>				
+					<a href="{{url('administrator/elearningdocuments')}}" class="btn btn-primary"><-- Indietro</a>				
 					<div class="table-responsive bs-example widget-shadow" style="text-align: center;">
 						<h4>Visualizza documento</h4>
 

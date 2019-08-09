@@ -59,7 +59,7 @@
 
 
 							<div class="form-group <?php echo e($errors->has('euros') ? ' has-error' : ''); ?>">
-								 <label for="euros">Euros</label> 
+								 <label for="euros">Euro</label> 
 								 <input type="text" class="form-control" id="euros" disabled="" value="<?php echo e(!empty($getConvertionById)?$getConvertionById->convertion_euro:''); ?>" name="euros" placeholder="Euros">
 
 								  <?php if($errors->has('euros')): ?>

@@ -114,7 +114,7 @@
 
 							<div class="col-xs-12" style="padding:10px">
 
-								indennità
+								PV
 								<input type="number" min="1" required style="width:100%" name="bonus" id="bonus" />
 								
 							</div>

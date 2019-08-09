@@ -299,9 +299,9 @@ $remaningdownline= $downline - $countChildPromoter ;
 
 
 		  
-			<div class="panel panel-default ">
+	<!-- 		<div class="panel panel-default ">
 			<div class="panel-heading">
-			<h3 class="panel-title"><span class="icon-panel"><i class="fa fa-user" aria-hidden="true"></i></span> News & eventi</h3>
+			<h3 class="panel-title"><span class="icon-panel"><i class="fa fa-user" aria-hidden="true"></i></span> News</h3>
 			</div>
 			<div class="panel-body"> 
 			
@@ -328,7 +328,7 @@ $remaningdownline= $downline - $countChildPromoter ;
 
                   </div>
 			</div>
-			</div>
+			</div> -->
 
 
 

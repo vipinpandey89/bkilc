@@ -41,7 +41,7 @@
                 @endif
 				<div class="panel panel-primary">
 				  <div class="panel-heading">
-					<h3 class="panel-title">Panel title</h3>
+					<h3 class="panel-title">Carte digitali</h3>
 				  </div>
 				  <div class="panel-body">
 					<div class="table-responsive">
@@ -54,8 +54,8 @@
 						  		  <th>Immagine</th>
 						  	 	 
 						  	  	  <th>Importo della carta</th>
-								  <th>lunghezza della carta (Mese)</th>
-								   <th>lunghezza della carta (giorni)</th>
+								  <th>Durata carta (mesi)</th>
+								   <th>Durata carta (giorni)</th>
 								  
 						  	   	 
 						  	      <!--<th>Crea data</th> -->
