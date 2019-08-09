@@ -1,0 +1,19 @@
+[22-May-2019 09:49:16 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/franc906/Bklic.komete.it/dummyforrecardo/load.php:3
+Stack trace:
+#0 /home/franc906/Bklic.komete.it/dummyforrecardo/load.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/franc906/Bklic.komete.it/dummyforrecardo/load.php on line 3
+[22-May-2019 09:49:29 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/franc906/Bklic.komete.it/dummyforrecardo/load.php:3
+Stack trace:
+#0 /home/franc906/Bklic.komete.it/dummyforrecardo/load.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/franc906/Bklic.komete.it/dummyforrecardo/load.php on line 3
+[22-May-2019 09:49:33 CST6CDT] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/franc906/Bklic.komete.it/dummyforrecardo/load.php:3
+Stack trace:
+#0 /home/franc906/Bklic.komete.it/dummyforrecardo/load.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/franc906/Bklic.komete.it/dummyforrecardo/load.php on line 3
+[22-May-2019 10:12:48 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function result_array() in /home/franc906/Bklic.komete.it/dummyforrecardo/event.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/franc906/Bklic.komete.it/dummyforrecardo/event.php on line 12
